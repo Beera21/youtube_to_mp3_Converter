@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/times-new-roman" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>🎵 YT2MP3 Magic</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VYKQ8W52L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-9VYKQ8W52L');
+  </script>
+</head>
+
+<body>
+  <div class="card">
+    <form action="/convert-mp3" method="POST" id="form">
+      <h1><i class="fa-brands fa-youtube"></i> YouTube to MP3 Magic</h1>
+      <p>by <a href="https://www.linkedin.com/in/sarthak-s-b622b022a/" target="_blank" rel="noopener noreferrer">Bareera Zakir</a></p>
+      <label for="url"><h4>Enter YouTube Video URL</h4></label>
+      <input type="text" name="url" id="url" placeholder="Paste YouTube link here..." required />
+      <button type="submit" id="convert-btn">🎧 Convert & Download</button>
+      <p class="footer-note"><b>Please wait 20–30 seconds after clicking the button</b></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('form').addEventListener('submit', function () {
+      const btn = document.getElementById('convert-btn');
+      btn.innerText = 'Converting...';
+      btn.disabled = true;
+    });
+  </script>
+</body>
+</html>
